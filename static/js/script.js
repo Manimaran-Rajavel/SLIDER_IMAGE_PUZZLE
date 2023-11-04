@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (timeRemaining <= 0) {
             clearInterval(timer);
             alert("Time's up! You didn't solve the puzzle.");
+            window.location.href = '/home';
+            
         }
     }
     
@@ -101,6 +103,8 @@ document.addEventListener("DOMContentLoaded", function () {
     
         if (isPuzzleSolved(tiles)) {
             alert("Congratulations! You solved the puzzle!");
+            const timeInSeconds = 180 - timeRemaining;
+            window.location.href = "/progress/"+timeInSeconds;
         }
     }
     
